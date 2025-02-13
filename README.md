@@ -1,5 +1,5 @@
 # OwnCalendar
-Simple python calendar desktop application
+Simple python calendar desktop application, working on Linux and Windows
 
 # Install requirements
 pip install -r requirements.txt
