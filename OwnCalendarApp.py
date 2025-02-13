@@ -33,7 +33,6 @@ class CalendarApp(ttk.Window):
                 logo = ttk.PhotoImage(file='calendar.gif')
                 self.call('wm', 'iconphoto', self._w, logo)
 
-        
         # Init curent date
         self.current_year = datetime.datetime.now().year
         self.current_month = datetime.datetime.now().month
