@@ -1,5 +1,5 @@
 """
-Simple desktop Calendar app
+Simple desktop Calendar
 """
 import sys
 import os
