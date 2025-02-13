@@ -42,18 +42,17 @@ class CalendarApp(ttk.Window):
         self.left_button = ttk.Button(self, text="←", command=self.previous_month)
         self.left_button.place(x=300, y=5)
         ToolTip(self.left_button,"Prvious month")
-        
 
         # Rigth arrow button
         self.right_button = ttk.Button(self, text="→", command=self.next_month)
         self.right_button.place(x=360, y=5)
         ToolTip(self.right_button,"Next month")
-        
+
 
         self.home_button = ttk.Button(self,bootstyle="info", text="H", command=self.goto_home)
         self.home_button.place(x=335, y=5)
         ToolTip(self.home_button,"Go to current month")
-        
+
 
         # Calendar text, only read only
         self.calendar_text = ttk.Text(self, height=8, width=25, bg=self.cget("bg"),
@@ -130,7 +129,7 @@ class CalendarApp(ttk.Window):
 
         # Moth name
         month_name=self.MONTHS_HU[month]
-        
+
         if self.language_code=="en":
             month_name=self.MONTHS_EN[month]
         month_name =  f"       {year} {month_name} \n"
@@ -140,7 +139,7 @@ class CalendarApp(ttk.Window):
         weekdays = ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"]
         if self.language_code=="hu":
             weekdays = ["Hé", "Ke", "Sze", "Cs", "Pé", "Sz", "Va"]
-        
+
         wd.insert(ttk.END, "Wk ")  # week number
         for day in weekdays:
             color_tag = "weekend" if day in ["Sz", "Va","Sa","Su"] else "header"
